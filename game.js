@@ -7,16 +7,16 @@
 	
 	while(user_val != comp){
 
-		user_val = prompt("Input a value");
+	var user_val1 = prompt("Input a value");
 
-		if(user_val < comp){
+		if(user_val1  < comp  ){
 			alert("Cold");
 		}
 
-		else if (user_val > comp){
+		else if (user_val1 > comp ){
 			alert("Hot");
 		}
-
+		// user_val=user_val1;
 	}
 
 	alert ("You Won!!!");

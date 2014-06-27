@@ -45,3 +45,12 @@ input[type="number"]{
 	margin: 0 auto;
 	padding: 1px;
 }
+#play, #gues{
+	display: inline-block;
+	margin: 0 auto;
+}
+#we{
+	width: 14em;
+	margin: 0 auto;
+	margin-top: 1em;
+}
