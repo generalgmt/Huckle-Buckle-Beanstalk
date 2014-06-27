@@ -6,7 +6,7 @@ body{
 	background-position: cover;
 }
 #container{
-	width: 43%;
+	width: 410px;
 	height: 19em;
 	margin: 0 auto;
 	padding: 10px;
@@ -28,8 +28,8 @@ img{
 	width: 10em;
 }
 #image_load{
-	width: 8em;
-	height: 8em;
+	width: 80%;
+	height: 100%;
 	margin: 0 auto;
 }
 input[type="submit"], input[type="button"]{
@@ -41,6 +41,7 @@ input[type="submit"], input[type="button"]{
 	margin: 0 auto;
 	margin-top: 0.8em;
 	padding: 1px;
+	border-radius: 5px;
 }
 input[type="number"]{
 	width: 15em;
