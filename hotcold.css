@@ -1,0 +1,60 @@
+body{
+	background-color: black;
+	color: white;
+	width: 100%;
+	background-image: url('hb.jpg');
+	background-position: cover;
+}
+#container{
+	width: 410px;
+	height: 19em;
+	margin: 0 auto;
+	padding: 10px;
+	border:5px groove ;
+	background-color: #ff6699;
+	top: 3em;
+	position: relative;
+	border-radius: 10px;
+	z-index: 3;
+}
+img{
+	width:100%;
+	height: 100%;
+	margin: 0 auto;
+}
+#result_1{
+	margin: 0 auto;
+	color: black;
+	width: 10em;
+}
+#image_load{
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+}
+input[type="submit"], input[type="button"]{
+	background-color: blue;
+	width: 8em;
+	height: 2em;
+	color:white;
+	display: block;
+	margin: 0 auto;
+	margin-top: 0.8em;
+	padding: 1px;
+	border-radius: 5px;
+}
+input[type="number"]{
+	width: 15em;
+	height: 1.5em;
+	margin: 0 auto;
+	padding: 1px;
+}
+#play, #gues{
+	display: inline-block;
+	margin: 0 auto;
+}
+#we{
+	width: 14em;
+	margin: 0 auto;
+	margin-top: 1em;
+}
