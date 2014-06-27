@@ -1,8 +1,12 @@
 // alert("Welcome").delay(30000, prompt("what is your Age");
 $(document).ready(function(){
 	var comp =Math.floor(Math.random() * 100);
-		var user_val;
+	// var comp = 50;
+		var curr_guess;
 		var num_input =0;
+		var prev_guess;
+		var diff1;
+		var diff2;
 
 	$("#play").click(function() {
 		location.reload();
@@ -10,48 +14,65 @@ $(document).ready(function(){
 	});
 
 
-	$("#gues").click(function(event){
+	$("#form").submit(function(event){
 		event.preventDefault();
-		var user_val1=$("#guess").val();
+		 curr_guess = parseInt($("#guess").val());
 
 		if(num_input===0){
-			$("#result").html("You are Hot");
-		}
-		else{
-			if (user_val1 > comp) {
-				$("#result").html("Hot");
-			} else if (user_val1  < comp) {
-				$("#result").html("Cold");	
-			} else {
+			if (curr_guess === comp) {
 				$("#result").html("You Won!!!");
 			}
+			else{
+			$("#result").html("You are Hot");
+			prev_guess=curr_guess;
+			form.reset();
+				}
+			}
+		else{
+				diff1= Math.abs( comp - prev_guess);
+				diff2= Math.abs(comp - curr_guess);
+				console.log("diff1 is " + diff1);
+				console.log("diff2 is " + diff2);
+				console.log("curr_guess is " + curr_guess);
+				console.log("prev_guess is " + prev_guess);
+			if(curr_guess === comp){
+				$("#result").html("You Won!!!");
+			}
+			else if (diff2 < diff1) {
+				$("#result").html("Hot");
+			}
+			else if (diff2  > diff1) {
+				$("#result").html("Cold");	
+			}
 		}
+		prev_guess = curr_guess;
 		num_input++;
-		//user_val =user_val1;
+		form.reset();
+		//curr_guess =prev_guess;
 	});
 
 });
 
 	
 
-		// 		if(user_val === comp)
+		// 		if(curr_guess === comp)
 		// {
 		// $("#result").html("You Won!!!");
 		// }
 		// else
 		// {	
-	// 	 		var user_val1=$("#guess").val();
-	// 		 	if(user_val1 < comp){
+	// 	 		var prev_guess=$("#guess").val();
+	// 		 	if(prev_guess < comp){
 	//  			$("#result").html("Cold");
 	//  			} 	
-	//  		else if (user_val1 > comp){
+	//  		else if (prev_guess > comp){
 	//  		$("#result").html("Hot");
 	//  			}
 	//  			}
 	// 		});
 
-	// if (user_val > comp) {
+	// if (curr_guess > comp) {
 	// 	alert('You are Hot');
-	// } else if (user_val  < comp) {
+	// } else if (curr_guess  < comp) {
 	// 	alert('You are Cold');	
 	// }
