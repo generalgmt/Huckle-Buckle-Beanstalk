@@ -15,7 +15,7 @@ body{
 	top: 3em;
 	position: relative;
 	border-radius: 10px;
-	z-index: 3;
+	box-shadow: 15px 15px 10px #888888;
 }
 img{
 	width:100%;
